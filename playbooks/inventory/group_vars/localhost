@@ -21,7 +21,7 @@ mysql_password:
 
 # If testing is true, then the environment is setup for using libvirt
 # virtual machines for the hardware instead of real hardware.
-# testing: true
+testing: true
 
 # The default port to download files via.  Required for IPA URL generation.
 # Presently the defaults are located in the roles, however if changed both
