@@ -194,20 +194,14 @@ function create_node {
       <model type='cirrus' vram='9216' heads='1'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
     </video>
-    <serial type='file'>
-      <source path='${VM_LOGGING}'/>
-      <target port='0'/>
-      <alias name='serial0'/>
-    </serial>
     <serial type='pty'>
       <source path='/dev/pts/49'/>
-      <target port='1'/>
+      <target port='0'/>
       <alias name='serial1'/>
     </serial>
-    <console type='file'>
-      <source path='${VM_LOGGING}'/>
-      <target type='serial' port='0'/>
-      <alias name='serial0'/>
+    <console type='pty' tty='/dev/pts/49'>
+      <source path='/dev/pts/49'/>
+      <target port='0'/>
     </console>
     <memballoon model='virtio'>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
